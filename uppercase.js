@@ -4,4 +4,4 @@ var upperCaser = function upperCaser(input){
 
 exports.upperCaser = upperCaser;
 
-console.log(exports.upperCaser("hello"));
+console.log("should print a capital hello",exports.upperCaser("hello") );
