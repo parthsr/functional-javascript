@@ -10,3 +10,6 @@ function double(num){
 newArr = doubleAll([1,2,3])
 module.exports = doubleAll;
 console.log(newArr);
+
+newArr = doubleAll([]);
+console.log("empty array test case", newArr);
