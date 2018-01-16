@@ -20,5 +20,5 @@ var func = function(){
 
 console.log("checking the number of times recursion happens",repeat(func,5));
 counter=0;
-console.log("should not execute if num is 0", repeat(func,-1));
+console.log("should not execute if num is -1", repeat(func,-1));
 module.exports = repeat;
