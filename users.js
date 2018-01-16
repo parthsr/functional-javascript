@@ -29,3 +29,18 @@ var testAllValid = [
       ];
 
 console.log("use case test case", checkUsersValid(goodUsers)(testAllValid)===true);
+
+var goodUsers = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 }
+  ];
+
+var testAllValid = [
+        { id: 2 },
+        { id: 1 },
+        { id: 3},
+        { id: 4}
+      ];
+
+console.log("use case test case 2", checkUsersValid(goodUsers)(testAllValid)===true);

@@ -16,3 +16,6 @@ function countWords(inputWords)
   }, {});
 }
 module.exports = countWords;
+
+
+console.log("initial test case for use case ",countWords(['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']));
