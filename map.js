@@ -12,4 +12,4 @@ module.exports = doubleAll;
 console.log(newArr);
 
 newArr = doubleAll([]);
-console.log("empty array test case", newArr);
+console.log("empty array test case ", newArr);

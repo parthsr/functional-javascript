@@ -14,7 +14,7 @@ var repeat = function repeat(operation,num)
 
 }
 
-var func = function(){
+var funCallback = function(){
   counter++;
 }
 
