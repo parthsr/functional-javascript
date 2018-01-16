@@ -7,5 +7,6 @@ function double(num){
   return num*2;
 }
 
+newArr = doubleAll([1,2,3])
 module.exports = doubleAll;
-console.log(module.exports);
+console.log(newArr);
