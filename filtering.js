@@ -14,3 +14,5 @@ function returnMessage(message)
 }
 
 module.exports = getShortMessages;
+
+console.log("checking returnMessage fucntion ", returnMessage({message: "hello"}));
