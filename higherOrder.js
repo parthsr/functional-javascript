@@ -1,17 +1,24 @@
+
 let counter =0;
 var repeat = function repeat(operation,num)
 {
+
   if(num>0)
   {
-    counter+=1;
     operation();
-    repeat(operation,num-1);
+    return repeat(operation,num-1);
   }
+  else {
+      return counter;
+  }
+
 }
 
-// var func = function(){
-//   console.log("callback function being executed",counter);
-// }
-// repeat(func,5);
-// console.log("checking the number of times recursion happens",counter );
+var func = function(){
+  counter++;
+}
+
+console.log("checking the number of times recursion happens",repeat(func,5));
+counter=0;
+console.log("should not execute if num is 0", repeat(func,-1));
 module.exports = repeat;
