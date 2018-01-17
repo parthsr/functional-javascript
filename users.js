@@ -3,9 +3,9 @@ function checkUsersValid(goodUsers) {
     return submittedUsers.every(
       function (users) {
         return goodUsers.some(function (element)
-          {
-            return element.id === users.id;
-          });
+        {
+          return element.id === users.id;
+        });
       });
   };
 }
@@ -14,33 +14,33 @@ function checkUsersValid(goodUsers) {
 
 module.exports = checkUsersValid;
 
-// console.log("use case test case", checkUsersValid([1,2,3,4,5])([2,8])===false);
-// console.log("use case test case 2", checkUsersValid([1,2,3,4,5])([2,3])===true);
+let goodUsers = [
+  { id: 1 },
+  { id: 2 },
+  { id: 3 }
+];
 
-var goodUsers = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 }
-  ];
+let testAllValid = [
+  { id: 2 },
+  { id: 1 }
+];
 
-var testAllValid = [
-        { id: 2 },
-        { id: 1 }
-      ];
+console.log('use case test case', checkUsersValid(goodUsers)(testAllValid)===true);
 
-console.log("use case test case", checkUsersValid(goodUsers)(testAllValid)===true);
+goodUsers = [
+  { id: 1 },
+  { id: 2 },
+  { id: 3 }
+];
 
-var goodUsers = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 }
-  ];
+testAllValid = [
+  { id: 2 },
+  { id: 1 },
+  { id: 3},
+  { id: 4}
+];
 
-var testAllValid = [
-        { id: 2 },
-        { id: 1 },
-        { id: 3},
-        { id: 4}
-      ];
+console.log('use case test case 2', checkUsersValid(goodUsers)(testAllValid)===true);
 
-console.log("use case test case 2", checkUsersValid(goodUsers)(testAllValid)===true);
+console.log('use case for test case 3 wherein goodUsers is empty', checkUsersValid([])(testAllValid)==false);
+console.log('use case for test case 3 wherein testAllValid is empty', checkUsersValid(goodUsers)([])==false);

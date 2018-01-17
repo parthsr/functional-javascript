@@ -1,15 +1,15 @@
-var doubleAll = function doubleAll(numbers)
+let doubleAll = function doubleAll(numbers)
 {
-    return numbers.map(double);
-}
+  return numbers.map(double);
+};
 
 function double(num){
   return num*2;
 }
 
-newArr = doubleAll([1,2,3])
+newArr = doubleAll([1,2,3]);
 module.exports = doubleAll;
 console.log(newArr);
 
 newArr = doubleAll([]);
-console.log("empty array test case ", newArr);
+console.log('empty array test case ', newArr);
