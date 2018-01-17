@@ -7,7 +7,7 @@ function countWords(inputWords)
 {
   return inputWords.reduce(function (allWords, word) {
     if (word in allWords) {
-      allWords[word]++;
+      allWords[word]+=1;
     }
     else {
       allWords[word] = 1;
