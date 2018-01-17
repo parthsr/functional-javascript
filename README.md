@@ -1,2 +1,2 @@
 # functional-javascript
-Mckinsey work
+developing javascript skills like a boss
