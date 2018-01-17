@@ -2,7 +2,7 @@ function duckCount() {
   // SOLUTION GOES HERE
   let newArr = Array.prototype.slice.call(arguments).filter(
     function (arg){
-      return (('quack' in  arg) ===true);
+      return Object.prototype.hasOwnProperty.call(arg,'quack');
     }
   );
   return newArr.length;
