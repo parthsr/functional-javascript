@@ -1,11 +1,11 @@
 function duckCount() {
   // SOLUTION GOES HERE
-  let newObj = Array.prototype.slice.call(arguments).filter(
+  let newArr = Array.prototype.slice.call(arguments).filter(
     function (arg){
       return (('quack' in  arg) ===true);
     }
   );
-  return newObj.length;
+  return newArr.length;
 }
 
 module.exports = duckCount;
