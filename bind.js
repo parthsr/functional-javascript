@@ -1,7 +1,7 @@
 function bindExample(namespace) {
-  function params(){
+  let params = function params(){
     console.log( Array.prototype.slice.call(arguments).join(' '));
-  }
+  };
   return params.bind(null, namespace);
 };
 
