@@ -9,6 +9,7 @@ function repeat(operation, num) {
 function trampoline(fn) {
   while(fn && typeof fn === 'function') {
     fn = fn();
+    console.log(fn.toString());
   }
 }
 
@@ -17,3 +18,12 @@ module.exports = function(operation, num) {
     return repeat(operation, num);
   });
 };
+
+trampoline(function(){
+  return repeat(operation,100);
+});
+
+function operation()
+{
+  console.log('heloo');
+}
